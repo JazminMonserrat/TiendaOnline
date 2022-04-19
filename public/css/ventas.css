@@ -1,0 +1,79 @@
+.nameFont{
+  font-family: 'Didact Gothic', sans-serif;
+    color: #000000;
+    font-size: large;
+    
+  }
+
+  .ventaInfo{
+    background-color: #98ee99;
+    height: 5%;
+  margin: 1%;
+  box-shadow: 4px 9px #338a3e;
+  }
+
+  .upper{
+    margin-right: 10%;
+  }
+  .mid{
+    margin-right: 6%;
+  }
+
+  .low{
+    margin-right: 10%;
+    
+    
+  }
+.downText{
+
+  align-self: flex-end;
+  
+}
+
+
+
+  .productSegment{
+    background-color: #66bb6a;
+    position: relative;
+    display: flex;
+    
+    padding: 1%;
+
+  }
+  
+.imagenB{
+
+ 
+text-align: center;
+  opacity: 93%;
+  margin-right: 10%;
+
+}
+
+
+
+
+
+/*ScrollBar Chida
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(179, 72, 72, 0); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(32, 109, 13, 0.705); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(32, 109, 13, 0.705); 
+  }

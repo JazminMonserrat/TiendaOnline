@@ -1,0 +1,138 @@
+.bonsaiSegment{
+     float:inline-start;  width: 80%; padding: 2%;
+     display: block;
+    
+}
+
+.quantity {
+    margin-right: 10%;
+}
+
+
+.contenedor{
+    display:block;
+    height: 75vh;
+}
+
+
+.imagenB{
+    float: left;
+    display: block;
+    margin: 2%;
+
+    opacity: 93%;
+
+
+}
+
+.icons{
+  margin-left: 2%;
+  float: right;
+  cursor: pointer;
+}
+
+
+.imagenB:hover{
+    opacity: 78%;
+}
+.imagenB,
+.bonsaiSegment{
+    
+background-color: #66bb6a;
+box-shadow: 5px 10px #338a3e;
+display: inline-block;
+
+border-radius: 6px;
+transition: 0.3s all;
+
+}
+.bonsaiSegment:hover{
+    background-color: rgba(70, 190, 0, 0.205);
+}
+
+.agregarBonsai{
+padding:1%;
+width: 35%;
+background-color: #338a3e;
+}
+.buttonBonsai{
+  width: 100%;
+  background-color: #338a3e;
+  font-size: 20px;
+  border-color: rgba(255, 255, 255, 0);
+  border-radius: 10%;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.navFont{
+    font-family: 'Roboto', sans-serif;
+    color: #478ac9;
+    font-size: medium;
+  }
+  .infoFont{
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.925);
+    font-size: medium;
+  }
+
+  .nameFont{
+    font-family: 'Roboto', sans-serif;
+    color: rgba(77, 39, 19, 0.966);
+    font-size: large;
+  }
+
+  .bonsaiInformation{
+    width:100%;
+padding: 1%;
+
+border-color: rgb(0, 0, 0);
+  }
+
+
+  :root {
+    --grad-1: rgba(70, 185, 95, 0.836);
+    --grad-2: rgba(108, 161, 72, 0.795);
+  }
+  
+  body{
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background: rgba(128, 179, 171, 0);
+    
+  }
+
+/*ScrollBar Chida
+
+  /* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(179, 72, 72, 0); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(32, 109, 13, 0.705); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(32, 109, 13, 0.705); 
+  }
+
+  .lead{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }

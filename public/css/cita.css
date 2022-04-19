@@ -1,0 +1,17 @@
+.label-cita {
+    color: #478ac9;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+}
+
+.h1-cita {
+    margin-bottom: 15px !important;
+}
+
+#calendario{
+    width: 90%;
+    margin: 30px auto;
+}

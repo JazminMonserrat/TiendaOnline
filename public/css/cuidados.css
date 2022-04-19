@@ -1,0 +1,66 @@
+.contenedor-tarjetas {
+display: flex;
+flex-flow: row wrap;
+margin: 30px 40px 60px 40px;
+justify-content: space-between;
+}
+
+.tarjeta-cuidado {
+width: calc(30% - 15px);
+margin-right: 15px;
+min-height: 200px;
+background: #f2f2f6;
+border: 2px solid #007b00;
+box-shadow: 7px 7px 15px #007b00;
+border-radius: 20px;
+overflow: hidden;
+margin-top: 30px;
+padding: 20px;
+display: flex;
+flex-flow: column;
+justify-content: space-between;
+position: relative;
+}
+
+.registro {
+font-size: 20px;
+width: 90%;
+}
+
+.boton-editar {
+position: absolute;
+width: 40px;
+height: 40px;
+top: 15px;
+right: 15px;
+}
+
+.boton-editar img {
+width: 100%;
+height: 100%;
+}
+
+
+.boton-eliminar {
+position: absolute;
+width: 40px;
+height: 40px;
+bottom: 15px;
+right: 15px;
+}
+
+.boton-eliminar img {
+width: 100%;
+height: 100%;
+}
+
+.u-text-cuidado {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin: 66px auto 0 !important;
+}

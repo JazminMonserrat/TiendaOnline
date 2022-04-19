@@ -1,0 +1,92 @@
+.contenedor-tarjetas {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.contenedor-duda {
+    width: 100%;
+    border: 5px solid #007b00;
+    box-shadow: 7px 7px 15px #007b00;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 30px 0px 30px 0px;
+}
+
+.contenedor-pregunta{
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: justify;
+}
+.contenedor-pregunta > div{
+    padding: 0px 10px 10px 0px;
+}
+
+.nombre-duda {
+    font-weight: bold;
+}
+
+.correo-duda {
+    font-style: italic;
+    text-align: right;
+}
+
+.respuesta {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.boton-verde {
+    cursor: pointer;
+    background-color: #007b00 !important;
+    color: #fff !important;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.boton-azul {
+    cursor: pointer;
+    background-color: #478ac9 !important;
+    color: #fff !important;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.contenedor-respuesta{
+    padding: 0px 20px 20px 20px;
+    margin-left: 100px;
+    text-align: justify;
+}
+
+.contenedor-respuesta > div{
+    padding: 0px 10px 10px 0px;
+}
+
+.contenedor-respuesta textarea{
+    width: 100%;
+}
+
+.form-duda{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.form-duda textarea{
+    margin-bottom: 20px;
+}
+
+.alinear-izquierda{
+    width: 100%;
+    text-align: right;
+}
