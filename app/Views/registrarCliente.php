@@ -2,7 +2,6 @@
 require_once "../../conf/env.php";
 ?>
 
-
 <!DOCTYPE html>
 <html style="font-size: 16px;">
 
@@ -82,7 +81,7 @@ require_once "../../conf/env.php";
                                 name="confirmarContrasena" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
                                 required="">
                         </div>
-                        <div class="u-form-group u-form-group-7">
+                        <div class="u-form-group u-form-group-6">
                             <label for="text-2386" class="u-form-control-hidden u-label">Teléfono</label>
                             <input type="text" placeholder="Teléfono" id="telefono" name="telefono"
                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">

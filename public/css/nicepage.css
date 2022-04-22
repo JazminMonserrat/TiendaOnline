@@ -21,9 +21,9 @@
 }
 
 .alert-custom.alert-success{
-  background-color: #007b00 !important;
+  background-color: #eb17eb !important;
   box-shadow: 7px 7px 15px #94BB97;
-  border: 5px solid #007b00;
+  border: 5px solid #eb17eb;
 }
 
 .alert-custom.alert-warning{
@@ -45,7 +45,7 @@
 }
 
 .boton-cita {
-  background-color: #007b00 !important;
+  background-color: #eb17eb !important;
   color: #fff !important;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -321,7 +321,7 @@
   .fr-view a.fr-strong {
     font-weight: 700; }
   .fr-view a.fr-green {
-    color: green; }
+    color: #eb17eb; }
   .fr-view .fr-img-caption {
     text-align: center; }
     .fr-view .fr-img-caption .fr-img-wrap {
@@ -368,7 +368,7 @@
 a.fr-view.fr-strong {
   font-weight: 700; }
 a.fr-view.fr-green {
-  color: green; }
+  color: #eb17eb; }
 
 /**
  * Link style.

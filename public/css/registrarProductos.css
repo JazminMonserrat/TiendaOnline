@@ -1,32 +1,29 @@
 
-
 :root {
-    --grad-1: rgb(41, 146, 111);
-    --grad-2: rgb(129, 201, 230);
+    --grad-1: #F3EBF6;
+    --grad-2: #F3EBF6;
   }
   
   body{
-
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     background: rgba(128, 179, 171, 0);
-    
+    font-family: 'Ubuntu', sans-serif;
   }
   
 
 .image-upload>p>input {
     display: none;
-    
   }
   .inputImage{
     cursor: pointer;
     text-align: center;
   }
   .inputFont{
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(44, 42, 42);
     font-size: medium;
   }
   
@@ -45,6 +42,8 @@
     -moz-box-sizing:border-box;
     box-sizing:border-box;
     -webkit-box-sizing:border-box; 
+    font-family: 'Ubuntu', sans-serif;
+    
 }
 
 input:hover {
@@ -56,19 +55,22 @@ input:hover {
   background: linear-gradient(90deg, var(--grad-1) 0%, var(--grad-2) 100%);
   padding: 10px;
 }
-.registrar {background-image: linear-gradient(to right, #14b998 0%, #198851  51%, #14683a  100%)}
 .registrar {
-    margin: 0.8%;
-   padding: 0.70% 3%;
-   
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   
-   border-radius: 11%;
-  
+  cursor: pointer;
+      border-radius: 5em;
+      color: #fff;
+      background: linear-gradient(to right, #c70cce, #fb40f2);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0.8%;
+      font-size: 13px;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
  }
 
  .registrar:hover {
@@ -77,17 +79,22 @@ input:hover {
    text-decoration: none;
  }
  
- .limpiar {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
  .limpiar {
-  margin: 1%;
-    padding: 0.70% 3%;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-   
-    border-radius: 12%;
+      cursor: pointer;
+      border-radius: 5em;
+      color: #fff;
+      background: linear-gradient(to right, #af55af, #fb40f2);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin: 1%;
+      font-size: 13px;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
  
   }
 
