@@ -1,6 +1,5 @@
 <?php
 require_once "../../conf/env.php";
-require_once "../../app/Models/estilo.php";
 include URL_CONTROLADORES . "carrito.php";
 ?>
 
