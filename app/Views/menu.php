@@ -1,7 +1,7 @@
 <header class="u-clearfix u-header u-header" id="sec-e89e">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
             <a href="index.php" class="u-image u-logo u-image-1" data-image-width="299" data-image-height="266">
-                <img src="../../public" class="u-logo-image u-logo-image-1" data-image-width="64">
+                <img src="../../public/imagenes/bonsai_karla.png" class="u-logo-image u-logo-image-1" data-image-width="64">
             </a>
             <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
                 <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">

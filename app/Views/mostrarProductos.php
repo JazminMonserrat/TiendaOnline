@@ -1,16 +1,16 @@
 <?php
 require_once "../../conf/env.php";
+
 include URL_CONTROLADORES . "carrito.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Bonsais</title>
+    <title>Ver Productos</title>
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -32,7 +32,7 @@ include URL_CONTROLADORES . "carrito.php";
 
     <script language="JavaScript" type="text/javascript">
         function confirmationDelete(anchor) {
-            var conf = confirm('Estas Seguro que quieres borrar este Bonsai?');
+            var conf = confirm('¿Estás seguro que quieres BORRAR este producto?');
             if (conf)
                 window.location = anchor.attr("href");
         }
@@ -40,28 +40,20 @@ include URL_CONTROLADORES . "carrito.php";
 
     <script language="JavaScript" type="text/javascript">
         function confirmationEdit(anchor) {
-            var conf = confirm('Estas Seguro que quieres Editar este Bonsai?');
+            var conf = confirm('¿Estás seguro que quieres EDITAR este producto?');
             if (conf)
                 window.location = anchor.attr("href");
         }
     </script>
-
-
-
 
     <meta property="og:title" content="Inicio">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
-
-
 </head>
-<body class="u-body">
-    <!--Nav Bar-->
-    <!--No sirve-->
-    <!--Fin del NavBar-->
 
+<body class="u-body">
     <!--Mensaje para corroborar funcionamiento y boton de limpiar-->
     <br>
     <?php if ($mensaje != "") { ?>
@@ -83,14 +75,10 @@ include URL_CONTROLADORES . "carrito.php";
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_array()) {
 
-
-
                     //Agregar opciones para editar y eliminar
 
                     //Fuera del table                      
                     //Iconos para editar y borrar
-
-
 
                     echo "<div class='bonsaiInformation'>;";
                     echo "<div class='bonsaiSegment' >";
@@ -113,7 +101,6 @@ include URL_CONTROLADORES . "carrito.php";
             <input type='hidden' name='nombre' id='nombre' value='" . $row['nombre'] . "'>
             <input type='hidden' name='precio' id='precio' value='" . $row['precio'] . "'>
             <input type='hidden' name='cantidad' id='cantidad' value='1'>
-            <button class='btn btn-primary' name='btnAccion' value='Agregar' type='submit'>Agregar al Carrito</button>
            </form>";
 
 

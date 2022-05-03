@@ -2,7 +2,6 @@
 require_once "../../conf/env.php";
 ?>
 
-
 <!DOCTYPE html>
 <html style="font-size: 16px;">
 
@@ -114,6 +113,7 @@ require_once "../../conf/env.php";
             </p>
         </div>
     </footer>
+
 
 </body>
 

@@ -1,8 +1,8 @@
 <?php
 $index = true;
 session_start();
-require '../conf/database.php';
-require_once "../conf/env.php";
+require '../../conf/database.php';
+require_once "../../conf/env.php";
 
 if (isset($_SESSION['user_email'])) {
   $resultado = $conn->prepare('SELECT * FROM cliente WHERE correo=:email');
