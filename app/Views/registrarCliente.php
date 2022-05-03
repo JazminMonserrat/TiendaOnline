@@ -45,6 +45,9 @@ require_once "../../conf/env.php";
 </head>
 
 <body data-home-page="Iniciar-Sesión.html" data-home-page-title="Iniciar Sesión" class="u-body">
+    <?php
+	    include "../../app/Views/menu.php";
+	?>
     <div>
         <section class="u-clearfix u-section-1" id="sec-0b39">
             <div class="u-clearfix u-sheet u-sheet-1">

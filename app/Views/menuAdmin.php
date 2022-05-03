@@ -1,6 +1,5 @@
 <?php
-$ruta = "../Views/";
-$rutaSesion = "../Controllers/logout.php";
+require_once "../../conf/env.php";
 ?>
 
 <header class="u-clearfix u-header u-header" id="sec-e89e">
@@ -34,10 +33,10 @@ $rutaSesion = "../Controllers/logout.php";
                                 href="<?php echo $ruta?>verVentas.php" style="padding: 10px 20px;">Ventas</a></li>
                         <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active"
-                                href="<?php echo $ruta?>listaProductos.php" style="padding: 10px 20px;">Productos</a></li>
+                                href="mostrarProductos.php" style="padding: 10px 20px;">Productos</a></li>
                         <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active"
-                                href="<?php echo URL_CONTROLADORES?>logout.php" style="padding: 10px 20px;">Cerrar Sesión</a></li>
+                                href="<?php echo URL_CONTROLADORES?>logoutController.php" style="padding: 10px 20px;">Cerrar Sesión</a></li>
                     </ul>
                 </div>
                 <div class="u-custom-menu u-nav-container-collapse">

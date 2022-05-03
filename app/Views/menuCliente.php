@@ -23,15 +23,15 @@
 			<div class="u-custom-menu u-nav-container">
 				<ul class="u-nav u-unstyled u-nav-1">
                     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="index.php" style="padding: 10px 20px;">Inicio</a></li>
-                    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="listaProductosCliente.php" style="padding: 10px 20px;">Productos</a></li>
+                    <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="buscarProducto.php" style="padding: 10px 20px;">Productos</a></li>
 					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="pedidos.php" style="padding: 10px 20px;">Pedidos</a></li>
-					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="contacto.php" style="padding: 10px 20px;">Contacto</a></li>
+					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="editarPerfil.php?correo=<?php echo $_SESSION["user_email"] ?>" style="padding: 10px 20px;">Perfil</a></li>
 					<li class="u-nav-item navFont">
 						<a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base texto-negro" href="mostrar_carrito.php" style="padding: 10px 20px;">
 							Carrito (<?php echo (empty($_SESSION['Carrito'])) ? 0 : count($_SESSION['Carrito']); ?>)
 						</a>
 					</li>
-					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="<?php echo URL_CONTROLADORES ?>logout.php" style="padding: 10px 20px;">Cerrar Sesión</a></li>
+					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="<?php echo URL_CONTROLADORES ?>logoutController.php" style="padding: 10px 20px;">Cerrar Sesión</a></li>
 				</ul>
 			</div>
 			<div class="u-custom-menu u-nav-container-collapse">
@@ -40,8 +40,8 @@
 						<div class="u-menu-close"></div>
 						<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
 							<li class="u-nav-item"><a class="u-button-style u-nav-link" href="pedidos.php" style="padding: 10px 20px;">Pedidos</a></li>
-							<li class="u-nav-item"><a class="u-button-style u-nav-link" href="listaProductosCliente.php" style="padding: 10px 20px;">Productos</a></li>
-							<li class="u-nav-item"><a class="u-button-style u-nav-link" href="editarCliente.php?id_cliente=<?php echo $_SESSION["id_cliente"] ?>" style="padding: 10px 20px;">Perfil</a></li>
+							<li class="u-nav-item"><a class="u-button-style u-nav-link" href="buscarProducto.php" style="padding: 10px 20px;">Productos</a></li>
+							<li class="u-nav-item"><a class="u-button-style u-nav-link" href="editarPerfil.php?correo=<?php echo $_SESSION["user_email"] ?>" style="padding: 10px 20px;">Perfil</a></li>
 							<li class="u-nav-item navFont">
 								<a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="mostrar_carrito.php" style="padding: 10px 20px;">
 									Carrito (<?php echo (empty($_SESSION['Carrito'])) ? 0 : count($_SESSION['Carrito']); ?>)
