@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../../conf/env.php";
 
 include URL_CONTROLADORES . "carrito.php";
@@ -54,6 +55,14 @@ include URL_CONTROLADORES . "carrito.php";
 </head>
 
 <body class="u-body">
+
+<?php if(isset($_SESSION["id_admin"])){
+    require_once "menuAdmin.php";
+  }else{
+      header("Location:login.php");
+      exit();
+  }
+  ?>
     <!--Mensaje para corroborar funcionamiento y boton de limpiar-->
     <br>
     <?php if ($mensaje != "") { ?>
@@ -89,9 +98,9 @@ include URL_CONTROLADORES . "carrito.php";
 
                     echo "<div >";
                     echo "<label class='infoFont quantity' for=''>" . "Precio: " . $row['precio'] . ".00 $</label>";
-                    echo "<label class='quantity infoFont''for=''>" . "Cantidad: " . $row['catidad'] . "</label>";
+                    echo "<label class='quantity infoFont''for=''>" . "Cantidad: " . $row['cantidad'] . "</label>";
 
-                    echo "<i class='fa fa-trash-o  icons' id='eliminar-producto' aria-hidden='true' data-id='" . $row['id_producto'] . "'></i>";
+                    echo "<i class='fa fa-trash-o  icons eliminar-producto' aria-hidden='true' data-id='" . $row['id_producto'] . "'></i>";
                     echo "<i class='fa fa-pencil icons' aria-hidden='true'  
           onclick='javascript:confirmationEdit($(this));return false;' href='../../app/Views/editarProducto.php?id=" . $row['id_producto'] . "'> </i>";
                     echo "</div>";

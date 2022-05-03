@@ -72,8 +72,9 @@ include URL_CONTROLADORES . "carrito.php";
 	<div class='contenedor'>
 		<!--container-->
 		<?php
- 
-		$sql = "SELECT * FROM producto";
+
+		$mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+		$sql = "SELECT * FROM productos";
 		if ($result = $mysqli->query($sql)) {
 			if ($result->num_rows > 0) {
 				while ($row = $result->fetch_array()) {

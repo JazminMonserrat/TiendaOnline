@@ -1,14 +1,15 @@
 <?php
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-    require_once "../../conf/env.php";
-    require_once "../Models/producto.php";
-    $producto = Producto::buscarProducto($_GET['id']);
-} else {
-    header("location: ../../index.php");
-    exit();
-}
 
 session_start();
+if(isset($_GET["correo"]) && is_string($_GET["correo"])){
+    require_once "../../conf/env.php";
+    require_once "../Models/usuario.php";
+
+    $usuario = Usuario::buscarUsuarioPorCorreo($_GET["correo"]);
+    if(!$usuario){
+        header("Location: /index.php");
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ session_start();
     <meta name="keywords" content="Blooms, For Every Occasion">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Editar producto</title>
+    <title>Registrar Usuario</title>
     <link rel="stylesheet" href="<?php echo URL_CSS?>registrarCliente.css" media="screen">
     <link rel="stylesheet" href="<?php echo URL_CSS?>nicepage.css" media="screen">
     <link rel="stylesheet" href="<?php echo URL_CSS?>Iniciar-Sesión.css" media="screen">
@@ -44,7 +45,7 @@ session_start();
 		"@type": "Organization",
 		"name": "",
 		"url": "index.html",
-		"logo": "../../public/imagenes/bonsai_karla.png"
+		"logo": "../../publico/imagenes/bonsai_karla.png"
 }</script>
     <meta property="og:title" content="Inicio">
     <meta property="og:type" content="website">
@@ -55,7 +56,7 @@ session_start();
 
 <body data-home-page="Iniciar-Sesión.html" data-home-page-title="Iniciar Sesión" class="u-body">
 <?php if(isset($_SESSION["id_admin"])){
-    require_once "menuAdmin.php";
+    require_once "menuCliente.php";
   }else{
       header("Location:login.php");
       exit();
@@ -64,56 +65,55 @@ session_start();
     <div>
         <section class="u-clearfix u-section-1" id="sec-0b39">
             <div class="u-clearfix u-sheet u-sheet-1">
-                <h1 class="u-text u-text-default u-text-1">Editar producto</h1>
+                <h1 class="u-text u-text-default u-text-1">Editar de Usuario</h1>
                 <div class="u-form u-form-1">
-                    <form enctype="multipart/form-data" action="<?php echo URL_CONTROLADORES?>editarProductoController.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
-                        style="padding: 10px" source="custom" name="form">
-                        <input class="form-file form-hidden" type="file" name="imagenProducto" id="imagenProducto">
-                        <input type="hidden" name="id_producto" value="<?php echo $producto->id_producto?>">
+                    <form action="<?php echo URL_CONTROLADORES?>editarUsuarioController.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                        style="padding: 10px" source="custom" name="form" enctype="multipart/form-data">
+                        
+                        <input class="form-file form-hidden" type="text" name="id_correo" id="id_correo" value="<?php echo $usuario->correo ?>"/>
+                        
                         <div class="u-form-group u-form-name">
                             <label for="name-dc48" class="u-form-control-hidden u-label">Nombre</label>
-                            <input value="<?php echo $producto->nombre?>" type="text" placeholder="Nombre" id="nombre" name="nombre"
+                            <input type="text" placeholder="Nombre" id="nombre" name="nombre" value="<?php echo $usuario->nombre ?>"
                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                         </div>
                         <div class="u-form-group u-form-name u-form-group-2">
-                            <label for="name-8ced" class="u-form-control-hidden u-label">Descripción</label>
-                            <input value="<?php echo $producto->descripcion?>" type="text" placeholder="Descripción" id="descripcion" name="descripcion"
+                            <label for="name-8ced" class="u-form-control-hidden u-label">Correo</label>
+                            <input type="text" placeholder="Correo" id="correo" name="correo" value="<?php echo $usuario->correo ?>"
                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                         </div>
                         <div class="u-form-group u-form-name u-form-group-3">
-                            <label for="name-998d" class="u-form-control-hidden u-label">Categoria</label>
-                            <select name="categoria" id="categoria">
-                                <option <?php echo ($producto->categoria === "ropa") ? "selected": "";?> value="ropa">Ropa</option>
-                                <option <?php echo ($producto->categoria === "accesorio") ? "selected": "";?> value="accesorio">Accesorio</option>
-                                <option <?php echo ($producto->categoria === "smartwatch") ? "selected": "";?> value="smartwatch">Smartwatch</option>
-                                <option <?php echo ($producto->categoria === "auriculares") ? "selected": "";?> value="auriculares">Auriculares</option>
-                                <option <?php echo ($producto->categoria === "maquillaje") ? "selected": "";?> value="maquillaje">Maquillaje</option>
-                            </select>
-                        </div>
-                        <div class="u-form-group u-form-group-7">
-                            <label for="text-2386" class="u-form-control-hidden u-label">Cantidad</label>
-                            <input value="<?php echo $producto->cantidad?>" type="number" placeholder="Cantidad" id="cantidad" name="cantidad"
+                            <label for="name-998d" class="u-form-control-hidden u-label">Direccion</label>
+                            <input type="text" placeholder="Direccion" id="direccion" name="direccion" value="<?php echo $usuario->direccion ?>"
                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                         </div>
-                        <div class="u-form-email u-form-group">
-                            <label for="email-dc48" class="u-form-control-hidden u-label">Precio</label>
-                            <input value="<?php echo $producto->precio?>" type="number" placeholder="Precio" id="precio" name="precio"
+                        <div class="u-form-group u-form-group-4">
+                            <label for="text-5cce" class="u-form-control-hidden u-label">Contraseña</label>
+                            <input type="password" placeholder="Contraseña" id="contrasena" name="contrasena"
+                                class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                        </div>
+                        <div class="u-form-group u-form-group-5">
+                            <label for="text-d7af" class="u-form-control-hidden u-label">Confirmar Contraseña</label>
+                            <input type="password" placeholder="Confirmar contraseña" id="confirmarContrasena"
+                                name="confirmarContrasena" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                        </div>
+                        <div class="u-form-group u-form-group-6">
+                            <label for="text-2386" class="u-form-control-hidden u-label">Teléfono</label>
+                            <input type="text" placeholder="Teléfono" id="telefono" name="telefono" value="<?php echo $usuario->telefono ?>"
                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                         </div>
                         <div class="u-align-right u-form-group u-form-submit">
-                            <a href="#" class="boton-verde u-btn u-btn-submit u-button-style u-btn-1">ACTUALIZAR DATOS<br>
+                            <a href="<?php echo URL_CONTROLADORES?>editarUsuarioController.php" class="boton-verde u-btn u-btn-submit u-button-style u-btn-1">ACEPTAR<br>
                             </a>
-                            <input type="submit" value="submit" class="u-form-control-hidden">
+                            <input type="submit" value="submit" class="u-form-control-hidden"/>
                         </div>
-                        <div class="u-form-send-message u-form-send-success"> Tus datos han sido actualizados. </div>
+                        <div class="u-form-send-message u-form-send-success"> Tus datos han sido registrados. </div>
                         <div class="u-form-send-error u-form-send-message"> Ha ocurrido un error al guardarlo. </div>
-                        <input type="hidden" value="" name="recaptchaResponse">
+                        <input type="hidden" value="" name="recaptchaResponse"/>
                     </form>
                 </div>
-                <div alt="" class="u-image-registrar u-image-perfil u-image u-image-circle" style="background-image: url('/<?php echo $producto->imagenProducto?>');" data-image-width="1280" data-image-height="854">
-                </div>
-
-                <a class="select-bottom u-text u-text-registrar">CAMBIAR IMAGEN</a>
+                <a href="<?php echo URL_VISTAS?>login.php"
+                    class="boton-verde u-btn u-button-style u-hover-palette-1-dark-1 u-btn-2">Cancelar</a>
             </div>
         </section>
     </div>

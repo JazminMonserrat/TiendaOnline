@@ -15,6 +15,9 @@ require_once "../../conf/env.php";
 </head>
 
 <body>
+    <?php
+	    include "../../app/Views/menu.php";
+	?>
     <div class="main_login">
         <h1 class="sign">Iniciar Sesión</h1>
         <form action="<?php echo URL_CONTROLADORES?>loginController.php" method="post" class="form1">
@@ -22,7 +25,6 @@ require_once "../../conf/env.php";
             <input class="pass" name="password" type="password" placeholder="Password" required>
             <input class="login" type="submit" value="Login">
             <p class="forgot"><a href="registrarCliente.php">Registrarse</p>
-            <p class="forgot"><a href="login_admin.php">Administrador</p>
         </form>
     </div>
 </body>

@@ -2,7 +2,7 @@
 class Usuario{
     public $id_usuario;
     public $nombre;
-    public $contraseña;
+    public $contrasena;
     public $correo;
     public $tipo;
     public $telefono;
@@ -62,5 +62,27 @@ class Usuario{
 
     public function encriptarContrasena(){
         $this->contrasena = md5($this->contrasena);
+    }
+
+    public function editarUsuario($nuevaContraseña){
+        $validacion = false;
+
+        if($nuevaContraseña){
+            $this->encriptarContrasena();
+        }
+
+        $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+        $sql="UPDATE usuarios SET nombre=?, telefono=?, direccion=?, correo=?, contrasena=? WHERE correo=?";
+        $stmt = $mysqli->prepare($sql);
+        if($stmt) {
+            $stmt->bind_param("ssssss", $this->nombre, $this->telefono, $this->direccion, $this->correo, $this->contrasena, $this->correo);
+            if($stmt->execute()) {
+                $validacion = true;
+            }
+            $stmt->close();
+        } 
+        $mysqli->close();
+
+        return $validacion;
     }
 }

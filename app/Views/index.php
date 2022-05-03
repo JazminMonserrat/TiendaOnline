@@ -1,20 +1,11 @@
 <?php
 $index = true;
 session_start();
-require '../../conf/database.php';
 require_once "../../conf/env.php";
+require_once "../Models/usuario.php";
 
 if (isset($_SESSION['user_email'])) {
-  $resultado = $conn->prepare('SELECT * FROM cliente WHERE correo=:email');
-  $resultado->bindParam(':email', $_SESSION['user_email']);
-  $resultado->execute();
-
-  $registros = $resultado->fetch(PDO::FETCH_ASSOC);
-
-  $user = null;
-  if (count($registros) > 0) {
-    $user = $registros;
-  }
+  $user = Usuario::buscarUsuarioPorCorreo($_SESSION['user_email']);
 }
 ?>
 <!--Apartado de Creacion solo si el usuario a ingresado al sistema-->
@@ -62,17 +53,17 @@ if (isset($_SESSION['user_email'])) {
 
 <body data-home-page="Iniciar-Sesión.html" data-home-page-title="Iniciar Sesión" class="u-body">
 <?php
-  if(isset($_SESSION["usuario"])){
-    require_once "/menuAdmin.php";
-  }else if(isset($_SESSION["user_email"])){
-    require_once "/menuCliente.php";
+  if(isset($_SESSION["id_admin"])){
+    require_once "menuAdmin.php";
+  }else if(isset($_SESSION["id_cliente"])){
+    require_once "menuCliente.php";
   }else{
-    require_once "/menu.php";
+    require_once "menu.php";
   }
 ?>
 
   <section class="-lg -sm -xl -xs u-align-center u-clearfix u-white u-section-1" src="" id="carousel_8155">
-    <img class="u-expanded-width u-image u-preserve-proportions u-image-1" src="../../public/imagenes/logo.jpg" data-image-width="1366" data-image-height="768" data-animation-name="rotateIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+    <img class="u-expanded-width u-image u-preserve-proportions u-image-1" src="../../public/imagenes/logo_merlin.jpg" data-image-width="1366" data-image-height="768" data-animation-name="rotateIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
     <div class="u-clearfix u-gutter-32 u-layout-wrap u-layout-wrap-1">
       <div class="u-layout">
         <div class="u-layout-row">

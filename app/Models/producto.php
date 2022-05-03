@@ -86,4 +86,56 @@ class Producto{
         $mysqli->close();
         return $validacion;
     }
+
+    public static function buscarProductoPorClave($busqueda){
+        $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+        $productos = [];
+        $sql = "SELECT * FROM productos WHERE nombre like ?";
+        $stmt = $mysqli->prepare($sql);
+        if($stmt) {
+            $busqueda = "%".$busqueda."%";
+            $stmt->bind_param("s", $busqueda);
+            if($stmt->execute()) {
+                $result = $stmt->get_result();
+                while($row = $result->fetch_assoc()) {
+                    $producto = new Producto();
+                    $producto->id_producto = $row["id_producto"];
+                    $producto->nombre = $row["nombre"];
+                    $producto->descripcion = $row["descripcion"];
+                    $producto->categoria = $row["categoria"];
+                    $producto->precio = $row["precio"];
+                    $producto->cantidad = $row["cantidad"];
+                    $producto->imagenProducto = $row["imagenProducto"];
+                    $productos[] = $producto;
+                }
+            }
+            $stmt->close();
+        } 
+        $mysqli->close();
+        return $productos;
+    }
+
+    public static function buscarProductosDefault(){
+        $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+        $productos = [];
+        $sql = "SELECT * FROM productos";
+        if($result = $mysqli->query($sql)){
+            if($result->num_rows > 0){ 
+                while($row = $result->fetch_array()){
+                    $producto = new Producto();
+                    $producto->id_producto = $row["id_producto"];
+                    $producto->nombre = $row["nombre"];
+                    $producto->descripcion = $row["descripcion"];
+                    $producto->categoria = $row["categoria"];
+                    $producto->precio = $row["precio"];
+                    $producto->cantidad = $row["cantidad"];
+                    $producto->imagenProducto = $row["imagenProducto"];
+                    $productos[]=$producto;
+                }   
+            }
+            $result->close();
+        }
+        $mysqli->close();
+        return $productos;
+    }
 }

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../../conf/env.php";
 ?>
 
@@ -45,6 +46,13 @@ require_once "../../conf/env.php";
 </head>
 
 <body data-home-page="Iniciar-Sesión.html" data-home-page-title="Iniciar Sesión" class="u-body">
+<?php if(isset($_SESSION["id_admin"])){
+    require_once "menuAdmin.php";
+  }else{
+      header("Location:login.php");
+      exit();
+  }
+  ?>
     <div>
         <section class="u-clearfix u-section-1" id="sec-0b39">
             <div class="u-clearfix u-sheet u-sheet-1">

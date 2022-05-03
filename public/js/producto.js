@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    $("#eliminar-producto").click(function (event) {
+    $(".eliminar-producto").click(function (event) {
         event.preventDefault();
         let conf = confirm('Estas Seguro que quieres borrar este Producto?');
         if (conf){
