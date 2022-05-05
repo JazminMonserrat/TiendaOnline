@@ -16,7 +16,7 @@ require_once "../../conf/env.php";
 
 <body>
     <?php
-	    include "../../app/Views/menu.php";
+	  //  include "../../app/Views/menu.php";
 	?>
     <div class="main_login">
         <h1 class="sign">Iniciar Sesión</h1>
