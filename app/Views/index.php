@@ -25,6 +25,7 @@ if (isset($_SESSION['user_email'])) {
   <link rel="stylesheet" href="../../public/css/Iniciar-Sesión.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
   <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script class="u-script" type="text/javascript" src="../../public/js/nicepage.js" defer=""></script>
 
   <meta name="generator" content="Nicepage 3.11.0, nicepage.com">
@@ -49,6 +50,7 @@ if (isset($_SESSION['user_email'])) {
   <meta name="theme-color" content="#478ac9">
   <link rel="canonical" href="index.html">
   <meta property="og:url" content="index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body data-home-page="Iniciar-Sesión.html" data-home-page-title="Iniciar Sesión" class="u-body">
@@ -61,9 +63,47 @@ if (isset($_SESSION['user_email'])) {
     require_once "menu.php";
   }
 ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../public/imagenes/ropa_aesthetic.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../public/imagenes/ropa_aesthetic2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../../public/imagenes/ropa_aesthetic3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
   <section class="-lg -sm -xl -xs u-align-center u-clearfix u-white u-section-1" src="" id="carousel_8155">
-    <img class="u-expanded-width u-image u-preserve-proportions u-image-1" src="../../public/imagenes/logo_merlin.jpg" data-image-width="1366" data-image-height="768" data-animation-name="rotateIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
     <div class="u-clearfix u-gutter-32 u-layout-wrap u-layout-wrap-1">
       <div class="u-layout">
         <div class="u-layout-row">

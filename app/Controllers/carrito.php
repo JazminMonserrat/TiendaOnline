@@ -45,7 +45,7 @@ if(isset($_POST['btnAccion'])){
                     'id' => $ID,
                     'nombre' => $Nombre,
                     'precio' => $Precio,
-                    'cantidad' => $Cantidad
+                    'cantidad' => intval($Cantidad)
                 );
                 $_SESSION['Carrito'][0] = $producto;
                 $mensaje = "Producto Agregado Correctamente.";
@@ -55,18 +55,23 @@ if(isset($_POST['btnAccion'])){
                 if(in_array($ID, $id_Productos)){
                     foreach($_SESSION['Carrito'] as $indice=>$producto){
                         if($producto['id'] == $ID) {
-                            // $producto['cantidad'] = $producto['cantidad'] + 1;
-                            $_SESSION['Carrito'][$indice] = $producto;
+                            $productoBD = Producto::buscarProducto($ID);
+                            if($productoBD->cantidad > intval($producto['cantidad'])){
+                                $producto['cantidad'] = $producto['cantidad'] + 1;
+                                $_SESSION['Carrito'][$indice] = $producto;
+                                $mensaje = 'Producto Agregado Correctamente.';
+                            }else{
+                                $mensaje = 'Ya no se tienen mas ' . $productoBD->nombre;
+                            }
                         }
                     }
-                    $mensaje = 'Unidad Ya Agregada al Carrito.';
                 } else {
                     $sizeCarrito = count($_SESSION['Carrito']);
                     $producto = array(
                         'id' => $ID,
                         'nombre' => $Nombre,
                         'precio' => $Precio,
-                        'cantidad' => $Cantidad
+                        'cantidad' => intval($Cantidad)
                     );
                     $_SESSION['Carrito'][$sizeCarrito] = $producto;
                     $mensaje = "Producto Agregado Correctamente.";
@@ -77,28 +82,7 @@ if(isset($_POST['btnAccion'])){
 
         case 'Eliminar':
             #Verificar y desencriptar ID
-            if(is_numeric($_POST['id'])){
-                $ID = $_POST['id'];
-
-                foreach($_SESSION['Carrito'] as $indice=>$producto){
-                    if($producto['id'] == $ID) {
-                        if($producto['cantidad'] == 1){
-                            unset($_SESSION['Carrito'][$indice]);
-                            array_values($_SESSION['Carrito']);
-                            echo "<script type='text/javascript'>
-                            alert('Producto Borrado');
-                            window.location.href='".URL_VISTAS.'listaBonsaisCliente.php'."';
-                            </script>";
-                        } else {
-                            $producto['cantidad'] = $producto['cantidad'] - 1;
-                            $_SESSION['Carrito'][$indice] = $producto;
-                        }
-                    }
-                }
-            } else {
-                $mensaje = "Decrypt Error: ID Incorrecto";
-                break;
-            }
+            
         break;
         default:
             # code...

@@ -1,3 +1,4 @@
+<?php require_once "../util/funciones.php"; ?>
 <header class="u-clearfix u-header u-header" id="sec-e89e" style="background-color: white;">
 	<div class="u-clearfix u-sheet u-valign-middle u-sheet-1" >
 		<a href="index.php" class="u-image u-logo u-image-1" data-image-width="299" data-image-height="266">
@@ -28,7 +29,7 @@
 					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="editarPerfil.php?correo=<?php echo $_SESSION["user_email"] ?>" style="padding: 10px 20px;">Perfil</a></li>
 					<li class="u-nav-item navFont">
 						<a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base texto-negro" href="mostrar_carrito.php" style="padding: 10px 20px;">
-							Carrito (<?php echo (empty($_SESSION['Carrito'])) ? 0 : count($_SESSION['Carrito']); ?>)
+							Carrito (<?php echo (empty($_SESSION['Carrito'])) ? 0 : contarCarrito(); ?>)
 						</a>
 					</li>
 					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="<?php echo URL_CONTROLADORES ?>logoutController.php" style="padding: 10px 20px;">Cerrar Sesión</a></li>

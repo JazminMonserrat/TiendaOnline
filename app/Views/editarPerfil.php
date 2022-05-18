@@ -55,11 +55,11 @@ if(isset($_GET["correo"]) && is_string($_GET["correo"])){
 </head>
 
 <body data-home-page="Iniciar-Sesión.html" data-home-page-title="Iniciar Sesión" class="u-body">
-<?php if(isset($_SESSION["id_admin"])){
+<?php if(isset($_SESSION["id_cliente"])){
     require_once "menuCliente.php";
   }else{
-      header("Location:login.php");
-      exit();
+    header("Location: login.php");
+    exit();
   }
   ?>
     <div>

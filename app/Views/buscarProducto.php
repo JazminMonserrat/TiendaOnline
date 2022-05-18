@@ -35,22 +35,6 @@ if(isset($_GET["busqueda"]) && is_string($_GET["busqueda"])){
 	<script type="text/javascript" src="../../public/js/jquery.1.11.1.js"></script>
 	<script type="text/javascript" src="../../public/js/bootstrap.js"></script>
 
-	<script language="JavaScript" type="text/javascript">
-		function confirmationDelete(anchor) {
-			var conf = confirm('¿Estas seguro de que quieres borrar este producto?');
-			if (conf)
-				window.location = anchor.attr("href");
-		}
-	</script>
-
-	<script language="JavaScript" type="text/javascript">
-		function confirmationEdit(anchor) {
-			var conf = confirm('¿Estas seguro de que quieres editar este producto?');
-			if (conf)
-				window.location = anchor.attr("href");
-		}
-	</script>
-
 	<meta property="og:title" content="Inicio">
 	<meta property="og:type" content="website">
 	<meta name="theme-color" content="#478ac9">
@@ -78,8 +62,7 @@ if(isset($_GET["busqueda"]) && is_string($_GET["busqueda"])){
 	<br>
 	<?php if ($mensaje != "") { ?>
 		<div class="seccion-centrada alert alert-success">
-			<?php print_r($mensaje); ?>
-			<a href="<?php echo URL_CONTROLADORES ?>limpiar_carrito.php" class="badge badge-success">Limpiar Carrito</a>
+			<p><?php print_r($mensaje); ?></p>
 		</div>
 	<?php } ?>
 

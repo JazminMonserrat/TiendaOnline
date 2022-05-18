@@ -9,6 +9,14 @@
 .seccion-centrada{
     width: 80%;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.seccion-centrada > p {
+    margin-top: 0px;
+    font-size: 20px;
 }
 
 .tarjeta-producto{

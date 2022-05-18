@@ -25,7 +25,8 @@ include URL_CONTROLADORES . "carrito.php";
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.css">
     <script class="u-script" type="text/javascript" src="../../public/js/nicepage.js" defer=""></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript" src="../../public/js/jquery.1.11.1.js"></script>
     <script type="text/javascript" src="../../public/js/bootstrap.js"></script>
@@ -76,6 +77,14 @@ include URL_CONTROLADORES . "carrito.php";
         <div class="contenedor-margen alinear-derecha">
             <button type="button" class="boton-cita" id="registrarBonsai"><a href="<?php echo URL_VISTAS ?>registrarProducto.php">Registrar Producto</a></button>
         </div>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
         <!--container-->
         <?php
         $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
@@ -88,7 +97,7 @@ include URL_CONTROLADORES . "carrito.php";
 
                     //Fuera del table                      
                     //Iconos para editar y borrar
-
+                    
                     echo "<div class='bonsaiInformation'>;";
                     echo "<div class='bonsaiSegment' >";
                     echo "<img src='" . $row['imagenProducto'] . "' alt='Not Found' onerror=this.src='../../public/bonsais/Error.png' width='200' height='120' class='imagenB'>";
