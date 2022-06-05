@@ -30,7 +30,10 @@ require_once "../../conf/env.php";
                     <ul class="u-nav u-unstyled u-nav-1">
                     <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active"
-                                href="<?php echo $ruta?>verVentas.php" style="padding: 10px 20px;">Ventas</a></li>
+                                href="<?php echo $ruta?>reporteVentas.php" style="padding: 10px 20px;">Reporte</a></li>
+                    <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active"
+                                href="<?php echo $ruta?>historialPedidos.php" style="padding: 10px 20px;">Ventas</a></li>
                         <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active"
                                 href="mostrarProductos.php" style="padding: 10px 20px;">Productos</a></li>

@@ -141,4 +141,62 @@ class Compra
         }
         return $productos;
     }
+
+    public static function obtenerVentasPorFechas($fechaInicio, $fechaFin){
+        $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+        $compras = [];
+        if($fechaFin === $fechaInicio) {
+            $sql = "SELECT * FROM ventas WHERE fechaVenta = ?";
+        }else{
+            $sql = "SELECT * FROM ventas WHERE fechaVenta between ? and ?";
+        }
+        
+        $stmt = $mysqli->prepare($sql);
+        if($stmt) {
+            if($fechaFin === $fechaInicio) {
+                $stmt->bind_param("s", $fechaInicio);
+            }else{
+                $stmt->bind_param("ss", $fechaInicio, $fechaFin);
+            }
+            
+            if($stmt->execute()) {
+                $result = $stmt->get_result();
+                while($row = $result->fetch_assoc()) {
+                    $compra = new Compra();
+                    $compra->id_compra = $row["id_venta"];
+                    $compra->nombreCliente = $row["nombreCliente"];
+                    $compra->direccion = $row["direccion"];
+                    $compra->precioTotal = $row["total"];
+                    $compra->fecha = $row["fechaVenta"];
+                    $compra->totalVendio = $row["totalVendio"];
+                    $compra->cliente = Compra::buscarNombreUsuarioPorID($row["id_usuario"]);
+                    $compra->productos = Compra::obtenerProductosVenta($compra->id_compra, $mysqli);
+                    $compras[] = $compra;
+                }
+            }
+            $stmt->close();
+        }
+        $mysqli->close();
+        return $compras;
+    }
+
+    public static function buscarNombreUsuarioPorID($ID){
+        $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+        $usuario = null;
+        $sql = "SELECT nombre FROM usuarios WHERE id_usuario=?";
+        $stmt = $mysqli->prepare($sql);
+        if($stmt) {
+            $stmt->bind_param("s", $ID);
+            if($stmt->execute()) {
+                $result = $stmt->get_result();//stdClass
+                if($result->num_rows >= 1) {
+                    $row = $result->fetch_array(MYSQLI_ASSOC);
+                    $usuario = $row["nombre"];
+                }
+            }
+            $stmt->close();
+        } 
+        $mysqli->close();
+        return $usuario;
+    }
 }
