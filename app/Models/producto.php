@@ -7,16 +7,18 @@ class Producto{
     public $categoria;
     public $precio;
     public $cantidad;
+    public $cantidadVendida;
 
     public function registrarProducto()
     {
         $validacion = false;
         $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
-        $sql="INSERT INTO productos (nombre, descripcion, categoria, cantidad, precio, imagenProducto) values (?,?,?,?,?,?);";
+        $sql="INSERT INTO productos (nombre, descripcion, categoria, cantidad, precio, imagenProducto, borrado) values (?,?,?,?,?,?,?);";
         $stmt = $mysqli->prepare($sql);
+        $borrado = '0';
         if($stmt){
-            $stmt->bind_param("sssids", $this->nombre, $this->descripcion, $this->categoria, $this->cantidad, $this->precio, $this->imagenProducto);
+            $stmt->bind_param("sssidss", $this->nombre, $this->descripcion, $this->categoria, $this->cantidad, $this->precio, $this->imagenProducto, $borrado);
             
             if($stmt->execute()){
                 $validacion = true;
@@ -31,7 +33,7 @@ class Producto{
     public static function buscarProducto($id){
         $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
         $producto = null;
-        $sql = "SELECT * FROM productos WHERE id_producto = ?";
+        $sql = "SELECT * FROM productos WHERE id_producto = ? and borrado = 0";
         $stmt = $mysqli->prepare($sql);
         if($stmt) {
             $stmt->bind_param("i", $id);
@@ -74,7 +76,7 @@ class Producto{
     public function eliminarProducto(){
         $validacion = false;
         $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-        $sql = "DELETE FROM productos WHERE id_producto = ?";
+        $sql="UPDATE productos SET borrado = 1 WHERE id_producto=?";
         $stmt = $mysqli->prepare($sql);
         if ($stmt) {
             $stmt->bind_param("i", $this->id_producto);
@@ -90,7 +92,7 @@ class Producto{
     public static function buscarProductoPorClave($busqueda){
         $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
         $productos = [];
-        $sql = "SELECT * FROM productos WHERE nombre like ?";
+        $sql = "SELECT * FROM productos WHERE nombre like ? and cantidad > 0 and borrado = 0";
         $stmt = $mysqli->prepare($sql);
         if($stmt) {
             $busqueda = "%".$busqueda."%";
@@ -118,7 +120,7 @@ class Producto{
     public static function buscarProductosDefault(){
         $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
         $productos = [];
-        $sql = "SELECT * FROM productos";
+        $sql = "SELECT * FROM productos where cantidad > 0 and borrado = 0";
         if($result = $mysqli->query($sql)){
             if($result->num_rows > 0){ 
                 while($row = $result->fetch_array()){

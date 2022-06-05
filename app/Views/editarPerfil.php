@@ -21,7 +21,7 @@ if(isset($_GET["correo"]) && is_string($_GET["correo"])){
     <meta name="keywords" content="Blooms, For Every Occasion">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Registrar Usuario</title>
+    <title>Mi perfil</title>
     <link rel="stylesheet" href="<?php echo URL_CSS?>registrarCliente.css" media="screen">
     <link rel="stylesheet" href="<?php echo URL_CSS?>nicepage.css" media="screen">
     <link rel="stylesheet" href="<?php echo URL_CSS?>Iniciar-Sesión.css" media="screen">

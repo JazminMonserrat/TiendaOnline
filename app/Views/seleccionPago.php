@@ -66,9 +66,9 @@ require_once "../util/funciones.php";
     <div>
         <section class="u-clearfix u-section-1" id="sec-0b39">
             <div class="u-clearfix u-sheet u-sheet-1">
-                <h1 class="u-text u-text-default u-text-1">Registro de Usuario</h1>
+                <h1 class="u-text u-text-default u-text-1">Seleccionar metodo de pago</h1>
                 <div class="u-form u-form-1">
-                    <form action="<?php echo URL_CONTROLADORES ?>registrarUsuarioController.php" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form" enctype="multipart/form-data">
+                    <form action="<?php echo URL_CONTROLADORES ?>registrarVentaController.php" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form" enctype="multipart/form-data">
 
                         <input class="form-file form-hidden" type="text" name="cliente" id="clientes" value="<?php echo $cliente->id_usuario; ?>">
 
@@ -112,7 +112,7 @@ require_once "../util/funciones.php";
                             </a>
                             <input type="submit" value="submit" class="u-form-control-hidden">
                         </div>
-                        <div class="u-form-send-message u-form-send-success"> Tus datos han sido registrados. </div>
+                        <div class="u-form-send-message u-form-send-success"> Compra realizada </div>
                         <div class="u-form-send-error u-form-send-message"> Ha ocurrido un error al guardarlo. </div>
                         <input type="hidden" value="" name="recaptchaResponse">
                     </form>

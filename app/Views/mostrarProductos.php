@@ -11,7 +11,7 @@ include URL_CONTROLADORES . "carrito.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Productos</title>
+    <title>El Maletín de Merlin - Productos</title>
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -77,18 +77,10 @@ include URL_CONTROLADORES . "carrito.php";
         <div class="contenedor-margen alinear-derecha">
             <button type="button" class="boton-cita" id="registrarBonsai"><a href="<?php echo URL_VISTAS ?>registrarProducto.php">Registrar Producto</a></button>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
         <!--container-->
         <?php
         $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-        $sql = "SELECT * FROM productos";
+        $sql = "SELECT * FROM productos where borrado = 0";
         if ($result = $mysqli->query($sql)) {
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_array()) {
@@ -121,7 +113,6 @@ include URL_CONTROLADORES . "carrito.php";
             <input type='hidden' name='cantidad' id='cantidad' value='1'>
            </form>";
 
-
                     echo "</div>";
                     echo "</div>";
                 }
@@ -138,10 +129,7 @@ include URL_CONTROLADORES . "carrito.php";
 
         // Close connection
         $mysqli->close();
-
         ?>
-
-
     </div>
     <!--container-->
 </body>

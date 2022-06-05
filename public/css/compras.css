@@ -1,0 +1,67 @@
+.contendor-compras{
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.tarjeta-compra{
+    width: calc(50% - 15px);
+    display: flex;
+    flex-flow: column;
+}
+
+.tarjeta-compra > div:first-child {
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.tarjeta-compra > div:last-child {
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.item-producto {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 150px;
+    border-bottom: 1px solid #000;
+}
+
+.item-producto > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.item-producto > div:first-child{
+    width: 30%;
+    padding: 10px;
+}
+
+.item-producto > div > img {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.item-producto > div:nth-child(2){
+    width: 50%;
+    padding: 10px;
+}
+
+.item-producto > div:last-child{
+    width: 20%;
+    padding: 10px;
+}
+
+.fecha-compra {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}

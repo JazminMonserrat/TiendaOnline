@@ -47,7 +47,12 @@ require_once "../Models/producto.php";
 	<?php if (!empty($_SESSION['Carrito'])) { ?>
 
 		<div class="container">
-            <h3>Productos del Carrito</h3>
+            <div class="header-carrito">
+				<h3>Productos del Carrito</h3> 
+				<a href="<?php echo URL_CONTROLADORES?>limpiarCarritoController.php">
+					<button class="btn-primary">Limpiar carrito</button>
+				</a>
+			</div>
 			<table class="table table-bordered">
 				<thead class="thead-dark">
 					<tr>

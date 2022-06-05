@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo json_encode($jsondata);
             exit();
         } else {
-            $jsondata = ["error" => "Error, no se pudo guardar el usuario"];
+            $jsondata = ["error" => "Error, no se pudo guardar el producto"];
             header('Content-type: application/json; charset=utf-8');
             echo json_encode($jsondata);
             exit();

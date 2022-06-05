@@ -25,10 +25,10 @@
 				<ul class="u-nav u-unstyled u-nav-1">
                     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="index.php" style="padding: 10px 20px;">Inicio</a></li>
                     <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="buscarProducto.php" style="padding: 10px 20px;">Productos</a></li>
-					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="pedidos.php" style="padding: 10px 20px;">Pedidos</a></li>
-					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="editarPerfil.php?correo=<?php echo $_SESSION["user_email"] ?>" style="padding: 10px 20px;">Perfil</a></li>
+					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="historicoCompras.php" style="padding: 10px 20px;">Mis compras</a></li>
+					<li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base active" href="editarPerfil.php?correo=<?php echo $_SESSION["user_email"] ?>" style="padding: 10px 20px;">Mi perfil</a></li>
 					<li class="u-nav-item navFont">
-						<a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base texto-negro" href="mostrar_carrito.php" style="padding: 10px 20px;">
+						<a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base texto-negro" href="mostrarCarrito.php" style="padding: 10px 20px;">
 							Carrito (<?php echo (empty($_SESSION['Carrito'])) ? 0 : contarCarrito(); ?>)
 						</a>
 					</li>

@@ -20,7 +20,7 @@ if (isset($_SESSION['user_email'])) {
   <meta name="keywords" content="Blooms, For Every Occasion">
   <meta name="description" content="">
   <meta name="page_type" content="np-template-header-footer-from-plugin">
-  <title>Inicio</title>
+  <title>El Maletín de Merlin - Inicio</title>
   <link rel="stylesheet" href="../../public/css/nicepage.css" media="screen">
   <link rel="stylesheet" href="../../public/css/Iniciar-Sesión.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
