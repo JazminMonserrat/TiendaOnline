@@ -50,7 +50,7 @@ require_once "../Models/producto.php";
             <div class="header-carrito">
 				<h3>Productos del Carrito</h3> 
 				<a href="<?php echo URL_CONTROLADORES?>limpiarCarritoController.php">
-					<button class="btn-primary">Limpiar carrito</button>
+					<button class="btn btn-info">Limpiar carrito</button>
 				</a>
 			</div>
 			<table class="table table-bordered">

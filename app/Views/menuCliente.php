@@ -1,10 +1,10 @@
 <?php require_once "../util/funciones.php"; ?>
 <header class="u-clearfix u-header u-header" id="sec-e89e" style="background-color: white;">
 	<div class="u-clearfix u-sheet u-valign-middle u-sheet-1" >
+		<nav class="navbar navbar-light" style="background-color: #f5a4f1;">
 		<a href="index.php" class="u-image u-logo u-image-1" data-image-width="299" data-image-height="266">
 			<img src="../../public/imagenes/logo_merlin.jpg" class="u-logo-image u-logo-image-1" data-image-width="64">
 		</a>
-		<nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
 			<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
 				<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
 					<svg>

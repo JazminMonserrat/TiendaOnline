@@ -58,7 +58,7 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
     <div class="container">
         <div class="row">
             <div class="col">
-                <button class="btn btn-primary" id="btn-descarga">Descarga</button>
+                <button class="btn btn-info" id="btn-descarga">Descarga</button>
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
         <div class="container">
             <div class="row">
                 <div class="col text-uppercase font-weight-bold font-size-30">
-                    El maletin de Merlin
+                    El Maletin de Merlín
                 </div>
             </div>
             <div class="row">
@@ -82,7 +82,7 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
             </div>
             <div class="row">
                 <div class="col font-size-20">
-                    2281435411
+                    Tel. 2281435411
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
             <form method="GET" action="reporteVentas.php">
                 <div class="form-row align-items-center">
                     <div class="col-auto">
-                        <label class="mr-sm-2" for="fechaInicio">Fecha Inicio</label>
+                        <label class="mr-sm-3" for="fechaInicio">Fecha Inicio</label>
                         <input type="date" name="fechaInicio" class="form-control mb-2" id="fechaInicio">
                     </div>
                     <div class="col-auto">
@@ -98,7 +98,7 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
                         <input type="date" name="fechaFin" class="form-control mb-2" id="fechaFin">
                     </div>
                     <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mt-4">Buscar</button>
+                        <button type="submit" class="btn btn-info mt-4">Buscar</button>
                     </div>
                 </div>
             </form>

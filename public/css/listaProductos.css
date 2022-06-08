@@ -22,7 +22,7 @@
 .tarjeta-producto{
     display: flex;
     flex-flow: column;
-    border: 5px solid #478ac9;
+    border: 5px solid #f361e7;
     padding: 10px;
     border-radius: 5px;
     justify-content: space-between;

@@ -72,7 +72,7 @@ include URL_CONTROLADORES . "carrito.php";
             <a href="<?php echo URL_CONTROLADORES ?>limpiar_carrito.php" class="badge badge-success">Limpiar Carrito</a>
         </div>
     <?php } ?>
-
+    
     <div class='contenedor'>
         <div class="contenedor-margen alinear-derecha">
             <button type="button" class="boton-cita" id="registrarBonsai"><a href="<?php echo URL_VISTAS ?>registrarProducto.php">Registrar Producto</a></button>
@@ -84,11 +84,6 @@ include URL_CONTROLADORES . "carrito.php";
         if ($result = $mysqli->query($sql)) {
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_array()) {
-
-                    //Agregar opciones para editar y eliminar
-
-                    //Fuera del table                      
-                    //Iconos para editar y borrar
                     
                     echo "<div class='bonsaiInformation'>;";
                     echo "<div class='bonsaiSegment' >";
@@ -98,7 +93,7 @@ include URL_CONTROLADORES . "carrito.php";
                     echo "<label class='nameFont' for=''>" . $row['descripcion'] . "</label>";
 
                     echo "<div >";
-                    echo "<label class='infoFont quantity' for=''>" . "Precio: " . $row['precio'] . ".00 $</label>";
+                    echo "<label class='infoFont quantity' for=''>" . "Precio: $" . $row['precio'] . ".00 </label>";
                     echo "<label class='quantity infoFont''for=''>" . "Cantidad: " . $row['cantidad'] . "</label>";
 
                     echo "<i class='fa fa-trash-o  icons eliminar-producto' aria-hidden='true' data-id='" . $row['id_producto'] . "'></i>";

@@ -73,24 +73,20 @@ if (isset($_SESSION['user_email'])) {
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../../public/imagenes/ropa_aesthetic.jpg" class="d-block w-100" alt="...">
+      <img src="../../public/imagenes/ropa_aesthetic4.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Nuevos productos!!</h5>
+        <p>Ven y conoce nuestros productos, desde sudaderas hasta vestidos para dama</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../../public/imagenes/ropa_aesthetic2.jpg" class="d-block w-100" alt="...">
+      <img src="../../public/imagenes/ropa_aesthetic5.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="../../public/imagenes/ropa_aesthetic3.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
@@ -109,40 +105,21 @@ if (isset($_SESSION['user_email'])) {
         <div class="u-layout-row">
           <div class="u-align-center u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-container-style u-layout-cell u-left-cell u-size-20 u-white u-layout-cell-1">
             <div class="u-container-layout u-container-layout-1">
-              <img class="u-expanded-width u-image u-image-2" src="../../public/imagenes/pino.jpg" data-image-width="810" data-image-height="1440">
-              <h4 class="u-text u-text-custom-color-2 u-text-1">Pino</h4>
+              <img class="u-expanded-width u-image u-image-2" src="../../public/imagenes/vestido_frances.PNG" data-image-width="810" data-image-height="1440">
+              <h4 class="u-text u-text-custom-color-2 u-text-1">Vestido estilo francés</h4>
             </div>
           </div>
           <div class="u-align-center u-container-style u-layout-cell u-size-20 u-white u-layout-cell-2">
             <div class="u-container-layout u-valign-bottom u-container-layout-2">
-              <img class="u-expanded-width u-image u-image-3" src="../../public/imagenes/bugambilia.jpg" data-image-width="721" data-image-height="1280">
-              <h4 class="u-text u-text-custom-color-2 u-text-2">Bugambilia<br>
+              <img class="u-expanded-width u-image u-image-3" src="../../public/imagenes/vestido_pop.PNG" data-image-width="721" data-image-height="1280">
+              <h4 class="u-text u-text-custom-color-2 u-text-2">Vestido estilo Pop<br>
               </h4>
             </div>
           </div>
           <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-white u-layout-cell-3">
             <div class="u-container-layout u-valign-top u-container-layout-3">
-              <img class="u-expanded-width u-image u-image-4" src="../../public/imagenes/suculentas.jpg" data-image-width="1440" data-image-height="810">
-              <h4 class="u-text u-text-custom-color-2 u-text-3">Suculentas</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="u-clearfix u-section-2" id="sec-64ff">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-row">
-            <div class="u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="1440" data-image-height="810" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
-              <div class="u-container-layout u-container-layout-1"></div>
-            </div>
-            <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-              <div class="u-container-layout u-valign-middle u-container-layout-2">
-                <h2 class="u-custom-font u-font-raleway u-text u-text-1">Lo que me gusta del bonsai es que tiene un comienzo pero no un final. Una yema hoy es una rama mañana, es como la búsqueda del final del arcoiris.&nbsp;</h2>
-              </div>
+              <img class="u-expanded-width u-image u-image-4" src="../../public/imagenes/camisa_coreana.PNG" data-image-width="1440" data-image-height="810">
+              <h4 class="u-text u-text-custom-color-2 u-text-3">Camisa coreana</h4>
             </div>
           </div>
         </div>

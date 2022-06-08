@@ -70,10 +70,10 @@ if(isset($_GET["busqueda"]) && is_string($_GET["busqueda"])){
 	<div class='contenedor'>
 		<!--container-->
         <div class="seccion-busqueda">
-            <form class="" action="" method="GET">
+            <form class="seccion-busqueda" action="" method="GET">
                 <div class="u-form-group u-form-name input-busqueda">
-                    <input class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" placeholder="Buscar" type="text" name="busqueda">
-                    <input type="submit" value="buscar" class="btn-primary">
+                    <input class="form-control mr-sm-2" placeholder="Buscar" type="search" name="busqueda" aria-label="Search">
+                    <input type="submit" value="Buscar" class="btn btn btn-info my-2 my-sm-0">
                 </div>
             </form>
         </div>
@@ -88,7 +88,7 @@ if(isset($_GET["busqueda"]) && is_string($_GET["busqueda"])){
                     <strong><?php echo $producto->nombre?></strong>
                 </div>
                 <div>
-                    <span><?php echo $producto->precio?></span>
+                    <span><?php echo "$" . $producto->precio?></span>
                 </div>
                 <div>
                     <form action="" method='post'>
@@ -96,7 +96,7 @@ if(isset($_GET["busqueda"]) && is_string($_GET["busqueda"])){
                         <input type="hidden" name="nombre" value="<?php echo $producto->nombre ?>">
                         <input type="hidden" name="precio" value="<?php echo $producto->precio ?>">
                         <input type="hidden" name="cantidad" value="1">
-                        <button type="submit" name='btnAccion' value='Agregar' class="btn-primary" >Agregar al carrito</button>
+                        <button type="submit" name='btnAccion' value='Agregar' class="btn btn-primary" >Agregar al carrito</button>
                     </form>
                 </div>
             </div>
