@@ -73,7 +73,7 @@ require_once "../Models/producto.php";
 						<tr>
 							<th class="40%"><?php echo $producto['nombre'] ?></th>
 							<th class="15% text-center"><?php echo $producto['cantidad'] ?></th>
-							<th class="20% text-center"><?php echo $producto['precio'] ?></th>
+							<th class="20% text-center"><?php echo "$" . $producto['precio'] ?></th>
 							<th class="20% text-center"><?php echo number_format($producto['cantidad'] * $producto['precio'], 2) ?></th>
 							<th class="5%  text-center">
 								<form action="<?php echo URL_CONTROLADORES?>borrarProductoCarritoController.php" method="post">

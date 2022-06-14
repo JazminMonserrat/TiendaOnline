@@ -66,7 +66,7 @@ require_once "../util/funciones.php";
     <div>
         <section class="u-clearfix u-section-1" id="sec-0b39">
             <div class="u-clearfix u-sheet u-sheet-1">
-                <h1 class="u-text u-text-default u-text-1">Seleccionar metodo de pago</h1>
+                <h1 class="u-text u-text-default u-text-1">Seleccionar método de págo</h1>
                 <div class="u-form u-form-1">
                     <form action="<?php echo URL_CONTROLADORES ?>registrarVentaController.php" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form" enctype="multipart/form-data">
 
@@ -77,7 +77,7 @@ require_once "../util/funciones.php";
                             <input type="text" placeholder="Nombre" id="nombre" name="nombre" value="<?php echo $cliente->nombre; ?>" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" readonly>
                         </div>
                         <div class="u-form-group u-form-name u-form-group-3">
-                            <label for="name-998d" class="u-form-control-hidden u-label">Direccion</label>
+                            <label for="name-998d" class="u-form-control-hidden u-label">Dirección</label>
                             <input type="text" placeholder="Direccion" id="direccion" name="direccion" value="<?php echo $cliente->direccion; ?>" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                         </div>
                         <div class="u-form-group u-form-group-6">
@@ -90,7 +90,7 @@ require_once "../util/funciones.php";
                         </div>
                         <div class="u-form-group u-form-group-6">
                             <fieldset>
-                                <legend>Metodo de pago</legend>
+                                <legend>Método de pago</legend>
 
                                 <div>
                                     <input type="radio" id="tarjeta" name="pago" value="tarjeta">
@@ -99,12 +99,12 @@ require_once "../util/funciones.php";
 
                                 <div>
                                     <input type="radio" id="tranferencia" name="pago" value="tranferencia">
-                                    <label for="tranferencia">Tranferencia</label>
+                                    <label for="tranferencia">Transferencia</label>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="u-form-group u-form-group-6 hidden-input" id="seccion-pago">
-                            <label for="text-2386" class="u-form-control-hidden u-label">Codigo tranferencia</label>
+                            <label for="text-2386" class="u-form-control-hidden u-label">Código transferencia</label>
                             <input type="text" id="codigo" name="codigo" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" readonly>
                         </div>
                         <div class="u-align-right u-form-group u-form-submit">
@@ -117,7 +117,7 @@ require_once "../util/funciones.php";
                         <input type="hidden" value="" name="recaptchaResponse">
                     </form>
                 </div>
-                <a href="<?php echo URL_VISTAS ?>login.php" class="boton-verde u-btn u-button-style u-hover-palette-1-dark-1 u-btn-2">Cancelar</a>
+                <a href="<?php echo URL_VISTAS ?>login.php" class="boton-verde u-btn u-button-style u-hover-palette-1-dark-1 u-btn-2">CANCELAR</a>
             </div>
         </section>
     </div>

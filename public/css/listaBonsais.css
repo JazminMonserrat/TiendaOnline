@@ -26,9 +26,10 @@
 }
 
 .icons{
-  margin-left: 2%;
+  margin-left: 3%;
   float: right;
   cursor: pointer;
+  margin-bottom: 20px;  
 }
 
 

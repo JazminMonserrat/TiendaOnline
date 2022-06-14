@@ -101,7 +101,7 @@ session_start();
                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                         </div>
                         <div class="u-align-right u-form-group u-form-submit">
-                            <a href="#" class="boton-verde u-btn u-btn-submit u-button-style u-btn-1">ACTUALIZAR DATOS<br>
+                            <a href="<?php echo URL_VISTAS?>mostrarProductos.php" class="boton-verde u-btn u-btn-submit u-button-style u-btn-1">ACTUALIZAR DATOS<br>
                             </a>
                             <input type="submit" value="submit" class="u-form-control-hidden">
                         </div>

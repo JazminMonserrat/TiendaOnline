@@ -96,7 +96,7 @@ require_once "../../conf/env.php";
                                 required="">
                         </div>
                         <div class="u-align-right u-form-group u-form-submit">
-                            <a href="<?php echo URL_CONTROLADORES?>registrarProductoController.php" class="boton-verde u-btn u-btn-submit u-button-style u-btn-1">ACEPTAR<br>
+                            <a href="<?php echo URL_VISTAS?>mostrarProductos.php" class="boton-verde u-btn u-btn-submit u-button-style u-btn-1">ACEPTAR<br>
                             </a>
                             <input type="submit" value="submit" class="u-form-control-hidden">
                         </div>
@@ -107,7 +107,7 @@ require_once "../../conf/env.php";
                 </div>
                 <div alt="" class="u-image-perfil u-image u-image-circle u-image-registrar" data-image-width="1280" data-image-height="854">
                 </div>
-                <a href="<?php echo URL_VISTAS?>login.php"
+                <a href="<?php echo URL_VISTAS?>mostrarProductos.php"
                     class="boton-verde u-btn u-button-style u-hover-palette-1-dark-1 u-btn-2">Cancelar</a>
                 <p class="select-bottom u-text u-text-registrar">Selecciona tu imagen</p>
             </div>

@@ -112,7 +112,7 @@ if(isset($_GET["correo"]) && is_string($_GET["correo"])){
                         <input type="hidden" value="" name="recaptchaResponse"/>
                     </form>
                 </div>
-                <a href="<?php echo URL_VISTAS?>login.php"
+                <a href="<?php echo URL_VISTAS?>index.php"
                     class="boton-verde u-btn u-button-style u-hover-palette-1-dark-1 u-btn-2">Cancelar</a>
             </div>
         </section>

@@ -13,29 +13,30 @@
 }
 
 .tarjeta-compra > div:first-child {
-    height: 50px;
+    height: 30px;
     padding: 10px;
-    border: 1px solid #000;
+    border: 3px solid #61a5f3;
 }
 
 .tarjeta-compra > div:last-child {
     height: 100%;
     padding: 10px;
-    border: 1px solid #000;
+    border: 3px solid #61a5f3;
 }
 
 .item-producto {
     display: flex;
     flex-flow: row nowrap;
-    height: 150px;
-    border-bottom: 1px solid #000;
+    height: 120px;
+    border-bottom: 3px solid #61a5f3;
 }
 
 .item-producto > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .item-producto > div:first-child{
@@ -44,8 +45,8 @@
 }
 
 .item-producto > div > img {
-    height: 120px;
-    width: 120px;
+    height: 90px;
+    width: 90px;
     object-fit: cover;
     object-position: center;
 }
@@ -61,7 +62,8 @@
 }
 
 .fecha-compra {
-    font-size: 30px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
 }

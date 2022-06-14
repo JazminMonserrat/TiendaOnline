@@ -20,7 +20,7 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compra</title>
+    <title>Reporte de Ventas</title>
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -110,7 +110,7 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Cliente</th>
-                        <th scope="col">Direccion</th>
+                        <th scope="col">Dirección</th>
                         <th scope="col" s>Resumen de productos</th>
                         <th scope="col">Importe total</th>
                         <th scope="col">Fecha</th>
@@ -136,14 +136,14 @@ if (isset($_GET["fechaInicio"]) && $_GET["fechaInicio"] !== "" && isset($_GET["f
                                     </tbody>
                                 </table>
                             </td>
-                            <td><?php echo $compra->precioTotal ?></td>
+                            <td><?php echo "$" . $compra->precioTotal ?></td>
                             <td><?php echo $compra->fecha ?></td>
                         </tr>
                         <?php $total += $compra->precioTotal ?>
                     <?php } ?>
                     <tr>
                         <td colspan="4" class="text-right font-weight-bold font-size-15">Total</td>
-                        <td colspan="2" class="font-size-15"><?php echo $total ?></td>
+                        <td colspan="2" class="font-size-15"><?php echo "$" . $total ?></td>
                     </tr>
                 </tbody>
             </table>

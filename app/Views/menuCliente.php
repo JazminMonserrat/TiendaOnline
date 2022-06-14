@@ -3,7 +3,7 @@
 	<div class="u-clearfix u-sheet u-valign-middle u-sheet-1" >
 		<nav class="navbar navbar-light" style="background-color: #f5a4f1;">
 		<a href="index.php" class="u-image u-logo u-image-1" data-image-width="299" data-image-height="266">
-			<img src="../../public/imagenes/logo_merlin.jpg" class="u-logo-image u-logo-image-1" data-image-width="64">
+			<img src="../../public/imagenes/logo2.png" class="u-logo-image u-logo-image-1" data-image-width="64">
 		</a>
 			<div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
 				<a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">

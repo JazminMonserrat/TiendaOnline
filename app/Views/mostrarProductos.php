@@ -66,13 +66,6 @@ include URL_CONTROLADORES . "carrito.php";
   ?>
     <!--Mensaje para corroborar funcionamiento y boton de limpiar-->
     <br>
-    <?php if ($mensaje != "") { ?>
-        <div class="alert alert-success">
-            <?php print_r($mensaje); ?>
-            <a href="<?php echo URL_CONTROLADORES ?>limpiar_carrito.php" class="badge badge-success">Limpiar Carrito</a>
-        </div>
-    <?php } ?>
-    
     <div class='contenedor'>
         <div class="contenedor-margen alinear-derecha">
             <button type="button" class="boton-cita" id="registrarBonsai"><a href="<?php echo URL_VISTAS ?>registrarProducto.php">Registrar Producto</a></button>
@@ -102,11 +95,11 @@ include URL_CONTROLADORES . "carrito.php";
                     echo "</div>";
                     echo
                     "<form action='' method='post'>
-            <input type='hidden' name='id' id='id' value='" . $row['id_producto'] . "'>
-            <input type='hidden' name='nombre' id='nombre' value='" . $row['nombre'] . "'>
-            <input type='hidden' name='precio' id='precio' value='" . $row['precio'] . "'>
-            <input type='hidden' name='cantidad' id='cantidad' value='1'>
-           </form>";
+                    <input type='hidden' name='id' id='id' value='" . $row['id_producto'] . "'>
+                    <input type='hidden' name='nombre' id='nombre' value='" . $row['nombre'] . "'>
+                    <input type='hidden' name='precio' id='precio' value='" . $row['precio'] . "'>
+                    <input type='hidden' name='cantidad' id='cantidad' value='1'>
+                </form>";
 
                     echo "</div>";
                     echo "</div>";
